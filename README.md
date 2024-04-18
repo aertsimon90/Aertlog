@@ -21,4 +21,4 @@ The Aertlog theme combines red and black colors for a stylish look.
 
 Aertlog is a free and secure IP Logger service that allows you to create show-urls to log information when clicked. It provides a safe and reliable way to track interactions with your links.
 
-![Aertlog Screenshot](https://aertlog.pythonanywhere.com/static/img/screenshot.png)
+![Aertlog Screenshot](screenshot.jpg)
