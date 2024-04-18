@@ -1,7 +1,5 @@
 # Aertlog
 
-![Aertlog Logo](https://aertlog.pythonanywhere.com/static/img/logo.png)
-
 Aertlog is a free and secure IP Logger service.
 
 ## Usage
