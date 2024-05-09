@@ -120,6 +120,10 @@ def menu():
 			print("Enter a string please")
 			time.sleep(2)
 			menu()
+		elif len(idd) < 5:
+			print("Enter a string upper than 5 characters please")
+			time.sleep(2)
+			menu()
 		else:
 			logger(idd)
 	elif chc == "2":
