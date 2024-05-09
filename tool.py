@@ -81,7 +81,7 @@ def logger(name):
 		loggers = data.split("Logger URLs:\n")[1].split("\n\n")[0].split("\n")
 		logshow = data.split("Show Logs URL: ")[1].split("\n")[0]
 		logs = data.split("Logs:\n\n")[1].split("Capture Logs:\n\n")[0].split("\n\n")
-		caplogs = data.split("Capture Logs:\n\n")[1].split("\nUser Logs:")[0].split("\n\n")
+		caplogs = data.split("Capture Logs:\n\n")[1].split("\nUser Logs:")[0].split("\n")
 		userlogs = data.split("\nUser Logs:\n\n")[1].split("\n")
 		data = f"Aertlog Logs Display: \033[92m{logshow}\033[0m\n\n"
 		for url, n in zip(loggers, range(len(loggers))):
